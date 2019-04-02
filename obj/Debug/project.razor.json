@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\ire96\\Desktop\\P2_MED204\\VuforiaEditorScripts.csproj",
+  "TargetFramework": "v3.5",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
