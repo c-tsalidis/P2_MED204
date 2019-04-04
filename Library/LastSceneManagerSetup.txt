@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Ship_Info.unity
+- path: Assets/Scenes/ShipAR.unity
   isLoaded: 1
   isActive: 1
