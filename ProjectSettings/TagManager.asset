@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hull
+  - Engine
+  - Weather Station
+  - GPS
+  - Net
   layers:
   - Default
   - TransparentFX

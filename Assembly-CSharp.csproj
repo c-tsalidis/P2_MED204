@@ -53,8 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Manager.cs" />
-     <Compile Include="Assets\PrefabSelectionAR.cs" />
+     <Compile Include="Assets\DragAndDrop.cs" />
+     <Compile Include="Assets\Scripts\Manager.cs" />
+     <Compile Include="Assets\Scripts\PrefabSelectionAR.cs" />
+     <Compile Include="Assets\Scripts\ShipPartManager.cs" />
+     <Compile Include="Assets\Scripts\ShipPartsManager.cs" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
