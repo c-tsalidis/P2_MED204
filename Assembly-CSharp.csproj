@@ -53,7 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AnswerQuestion.cs" />
+     <Compile Include="Assets\Scripts\AnswerQuestionQuiz.cs" />
+     <Compile Include="Assets\Scripts\CorrectAnswer.cs" />
+     <Compile Include="Assets\Scripts\CorrectAnswersManager.cs" />
+     <Compile Include="Assets\Scripts\IncorrectAnswer.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\PrefabSelectionAR.cs" />
      <Compile Include="Assets\SmoothScrollRectSnapping.cs" />
