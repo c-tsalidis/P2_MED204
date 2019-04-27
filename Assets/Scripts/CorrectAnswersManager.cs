@@ -14,7 +14,19 @@ public class CorrectAnswersManager : MonoBehaviour
     private int numberOfCorrectAnswersSelected; 
     [SerializeField]
     private int numberOfIncorrectAnswersSelected;
-    
+
+    [SerializeField]
+    private string numberOfCorrectAnswersSelected_PlayerPrefs_Key;
+    [SerializeField]
+    private string numberOfIncorrectAnswersSelected_PlayerPrefs_Key;
+
+
+    [SerializeField]
+    private string efficiency_PlayerPrefs_Key;
+
+    [SerializeField]
+    private int efficiency;
+
     public void CheckAnswers()
     {
         // by default there are no answers selected
@@ -46,7 +58,33 @@ public class CorrectAnswersManager : MonoBehaviour
                 }
             }
         }
-        Debug.Log("Number of correct answers selected: " + numberOfCorrectAnswersSelected);
-        Debug.Log("Number of incorrect answers selected: " + numberOfIncorrectAnswersSelected);
+        // Debug.Log("Number of correct answers selected: " + numberOfCorrectAnswersSelected);
+        // Debug.Log("Number of incorrect answers selected: " + numberOfIncorrectAnswersSelected);
+
+        // The key of PlayerPrefs go like this: 
+        // "Number Of Correct Answers Hull", and so on 
+        // "Number Of Incorrect Answers Hull", and so on 
+        // PlayerPrefs.SetInt(numberOfCorrectAnswersSelected_PlayerPrefs_Key, numberOfCorrectAnswersSelected);
+        // PlayerPrefs.SetInt(numberOfIncorrectAnswersSelected_PlayerPrefs_Key, numberOfIncorrectAnswersSelected);
+
+
+        float sum1 = (numberOfCorrectAnswersSelected - (numberOfIncorrectAnswersSelected / 2));
+        float sum2 = (correctAnswers.Length + incorrectAnswers.Length);
+        float division = sum1 / sum2 * 100;
+
+        /*
+        Debug.Log(numberOfCorrectAnswersSelected);
+        Debug.Log(numberOfIncorrectAnswersSelected / 2);
+        Debug.Log(correctAnswers.Length);
+        Debug.Log(incorrectAnswers.Length);
+        Debug.Log(numberOfCorrectAnswersSelected -(numberOfIncorrectAnswersSelected/2));
+        Debug.Log(correctAnswers.Length + incorrectAnswers.Length);
+        Debug.Log(sum1);
+        Debug.Log(sum2);
+        Debug.Log(sum1 / sum2);
+         */
+        efficiency = Mathf.RoundToInt( division);
+
+        PlayerPrefs.SetInt(efficiency_PlayerPrefs_Key, efficiency);
     }
 }
