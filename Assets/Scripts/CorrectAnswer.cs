@@ -5,6 +5,9 @@ using UnityEngine;
 public class CorrectAnswer : MonoBehaviour
 {
     public bool correctAnswerSelected = false;
+    
+    [SerializeField]
+    private GameObject [] nonToggleIncorrectAnswers;
 
     public void MarkCorrectAnswerAsSelected()
     {
@@ -23,11 +26,39 @@ public class CorrectAnswer : MonoBehaviour
                     correctAnswerSelected = false;
                 }
             }
-            else
+            else // if it's not a toggable question --> (single option questions)
             {
-                correctAnswerSelected = true;
+                correctAnswerSelected = true;  
+                if(nonToggleIncorrectAnswers != null)
+                {
+                    for(int i = 0; i < nonToggleIncorrectAnswers.Length; i++)
+                    {
+                        if(nonToggleIncorrectAnswers[i].GetComponent<IncorrectAnswer>() != null)
+                        {
+                            IncorrectAnswer incorrectAnswer = nonToggleIncorrectAnswers[i].GetComponent<IncorrectAnswer>();
+                            incorrectAnswer.Unselect();
+                            /*
+                            int incorrectAnswersCounter = 0;
+                            if(incorrectAnswer.incorrectAnswerSelected == true)
+                            {
+                                incorrectAnswersCounter++;
+                                correctAnswerSelected = false;
+                            }
+                            if(incorrectAnswersCounter == 0) // if no incorrect answers are selected
+                            {
+                                correctAnswerSelected = true;
+                            }       
+                             */
+                        }
+                    }
+                }
             }
         }
+    }
+
+    public void Unselect()
+    {
+        correctAnswerSelected = false;
     }
 
 }

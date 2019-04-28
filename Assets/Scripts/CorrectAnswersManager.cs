@@ -68,9 +68,10 @@ public class CorrectAnswersManager : MonoBehaviour
         // PlayerPrefs.SetInt(numberOfIncorrectAnswersSelected_PlayerPrefs_Key, numberOfIncorrectAnswersSelected);
 
 
-        float sum1 = (numberOfCorrectAnswersSelected - (numberOfIncorrectAnswersSelected / 2));
-        float sum2 = (correctAnswers.Length + incorrectAnswers.Length);
-        float division = sum1 / sum2 * 100;
+        float sum1 = (numberOfCorrectAnswersSelected - (numberOfIncorrectAnswersSelected / 1.50f));
+        // float sum2 = (correctAnswers.Length + incorrectAnswers.Length);
+        // float division = sum1 / sum2 * 100;
+        float division = (100 * sum1) / correctAnswers.Length;
 
         /*
         Debug.Log(numberOfCorrectAnswersSelected);

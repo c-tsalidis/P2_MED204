@@ -29,7 +29,7 @@ public class EfficiencyManager : MonoBehaviour
         efficiencies[1] = PlayerPrefs.GetInt("Efficiency Physics");
         efficiencies[2] = PlayerPrefs.GetInt("Efficiency Biology");
         efficiencies[3] = PlayerPrefs.GetInt("Efficiency Chemistry");
-
+        efficiencies[4] = PlayerPrefs.GetInt("Efficiency Geography");
 
         for (int i = 0; i < efficiencies.Length ; i++)
         {
@@ -44,12 +44,11 @@ public class EfficiencyManager : MonoBehaviour
 
     private void Update()
     {
-
-        
-
+        /* 
         for(int i = 0; i < subjectPanels.Length; i++)
         {
             subjectPanels[i].GetComponent<RectTransform>().sizeDelta = new Vector2(41, efficiencies[i] * offset);
         }
+        */
     }
 }
