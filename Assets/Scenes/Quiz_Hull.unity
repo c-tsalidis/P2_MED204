@@ -386,7 +386,6 @@ GameObject:
   - component: {fileID: 268850469}
   - component: {fileID: 268850468}
   - component: {fileID: 268850467}
-  - component: {fileID: 268850472}
   m_Layer: 5
   m_Name: Question 3 Button (3)
   m_TagString: Untagged
@@ -430,6 +429,9 @@ MonoBehaviour:
   answer: {fileID: 1177646969}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &268850468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,7 +503,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 268850472}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -551,21 +553,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268850465}
   m_CullTransparentMesh: 0
---- !u!114 &268850472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268850465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
 --- !u!1 &289211168
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +567,6 @@ GameObject:
   - component: {fileID: 289211172}
   - component: {fileID: 289211171}
   - component: {fileID: 289211170}
-  - component: {fileID: 289211175}
   m_Layer: 5
   m_Name: Question 3 Button (1)
   m_TagString: Untagged
@@ -624,6 +610,9 @@ MonoBehaviour:
   answer: {fileID: 1558683867}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &289211171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,7 +684,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 289211175}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -745,21 +734,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289211168}
   m_CullTransparentMesh: 0
---- !u!114 &289211175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289211168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
 --- !u!1 &326425890
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,7 +748,6 @@ GameObject:
   - component: {fileID: 326425894}
   - component: {fileID: 326425893}
   - component: {fileID: 326425892}
-  - component: {fileID: 326425897}
   m_Layer: 5
   m_Name: Question 4 Button (1)
   m_TagString: Untagged
@@ -818,6 +791,9 @@ MonoBehaviour:
   answer: {fileID: 1503614005}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &326425893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,7 +865,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 326425897}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -939,21 +915,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326425890}
   m_CullTransparentMesh: 0
---- !u!114 &326425897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326425890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
 --- !u!1 &327507204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,7 +1153,6 @@ GameObject:
   - component: {fileID: 411152761}
   - component: {fileID: 411152760}
   - component: {fileID: 411152759}
-  - component: {fileID: 411152764}
   m_Layer: 5
   m_Name: Question 3 Correct Answer Button
   m_TagString: Untagged
@@ -1236,6 +1196,9 @@ MonoBehaviour:
   answer: {fileID: 525036102}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 1
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &411152760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1307,7 +1270,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 411152764}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkCorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -1357,20 +1320,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411152757}
   m_CullTransparentMesh: 0
---- !u!114 &411152764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411152757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dba733ad1731304a862975780dcf95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctAnswerSelected: 0
-  nonToggleIncorrectAnswers: []
 --- !u!1 &458655773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,6 +1661,7 @@ MonoBehaviour:
   - {fileID: 1830998209}
   - {fileID: 411152757}
   - {fileID: 1401859275}
+  correctAnswersCounter: 0
   incorrectAnswers:
   - {fileID: 1081614157}
   - {fileID: 1524720061}
@@ -2473,7 +2423,6 @@ GameObject:
   - component: {fileID: 732123803}
   - component: {fileID: 732123802}
   - component: {fileID: 732123801}
-  - component: {fileID: 732123806}
   m_Layer: 5
   m_Name: Question 3 Button (2)
   m_TagString: Untagged
@@ -2517,6 +2466,9 @@ MonoBehaviour:
   answer: {fileID: 345729426}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &732123802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2588,7 +2540,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 732123806}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -2638,82 +2590,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732123799}
   m_CullTransparentMesh: 0
---- !u!114 &732123806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732123799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
---- !u!1 &751495448
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 751495449}
-  - component: {fileID: 751495450}
-  m_Layer: 5
-  m_Name: First row
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &751495449
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751495448}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1489982228}
-  - {fileID: 1081614158}
-  m_Father: {fileID: 992901888}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2.7, y: -25}
-  m_SizeDelta: {x: 250.29999, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &751495450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751495448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 5
-    m_Right: 5
-    m_Top: 15
-    m_Bottom: 5
-  m_ChildAlignment: 4
-  m_Spacing: 20
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
 --- !u!1 &754978982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,8 +3073,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 751495449}
-  - {fileID: 1312358028}
+  - {fileID: 1489982228}
+  - {fileID: 1081614158}
+  - {fileID: 1524720062}
+  - {fileID: 1817477983}
   m_Father: {fileID: 895349055}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3475,7 +3353,6 @@ GameObject:
   - component: {fileID: 1081614160}
   - component: {fileID: 1081614159}
   - component: {fileID: 1081614163}
-  - component: {fileID: 1081614164}
   m_Layer: 5
   m_Name: Question 1 Button (1)
   m_TagString: Untagged
@@ -3495,13 +3372,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 935113035}
-  m_Father: {fileID: 751495449}
+  m_Father: {fileID: 992901888}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 109.67, y: 37.44}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -60.6, y: -23.282}
+  m_SizeDelta: {x: 121.2, y: 46.565}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081614159
 MonoBehaviour:
@@ -3574,7 +3451,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1081614164}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -3640,23 +3517,9 @@ MonoBehaviour:
   answer: {fileID: 1791352171}
   isToggle: 0
   toggleText: 0
---- !u!114 &1081614164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081614157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 1489982227}
-  nonToggleIncorrectAnswers:
-  - {fileID: 1524720061}
-  - {fileID: 1817477982}
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!1 &1114205923
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,67 +3873,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1312358027
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1312358028}
-  - component: {fileID: 1312358029}
-  m_Layer: 5
-  m_Name: First row (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1312358028
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312358027}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1524720062}
-  - {fileID: 1817477983}
-  m_Father: {fileID: 992901888}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -2.7000048, y: -80}
-  m_SizeDelta: {x: 250.29999, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1312358029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312358027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 5
-    m_Right: 5
-    m_Top: 15
-    m_Bottom: 5
-  m_ChildAlignment: 4
-  m_Spacing: 20
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
 --- !u!1 &1352606952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4279,7 +4081,6 @@ GameObject:
   - component: {fileID: 1401859279}
   - component: {fileID: 1401859278}
   - component: {fileID: 1401859277}
-  - component: {fileID: 1401859282}
   m_Layer: 5
   m_Name: Question 4 Correct Answer Button
   m_TagString: Untagged
@@ -4323,6 +4124,9 @@ MonoBehaviour:
   answer: {fileID: 878109188}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 1
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &1401859278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4394,7 +4198,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1401859282}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkCorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -4444,20 +4248,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401859275}
   m_CullTransparentMesh: 0
---- !u!114 &1401859282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401859275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dba733ad1731304a862975780dcf95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctAnswerSelected: 0
-  nonToggleIncorrectAnswers: []
 --- !u!1 &1409983582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4472,7 +4262,6 @@ GameObject:
   - component: {fileID: 1409983586}
   - component: {fileID: 1409983585}
   - component: {fileID: 1409983584}
-  - component: {fileID: 1409983589}
   m_Layer: 5
   m_Name: Question 4 Button (3)
   m_TagString: Untagged
@@ -4516,6 +4305,9 @@ MonoBehaviour:
   answer: {fileID: 709061196}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &1409983585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4587,7 +4379,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1409983589}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -4637,21 +4429,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409983582}
   m_CullTransparentMesh: 0
---- !u!114 &1409983589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409983582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
 --- !u!1 &1425582903
 GameObject:
   m_ObjectHideFlags: 0
@@ -4868,7 +4645,6 @@ GameObject:
   - component: {fileID: 1489982231}
   - component: {fileID: 1489982230}
   - component: {fileID: 1489982229}
-  - component: {fileID: 1489982234}
   m_Layer: 5
   m_Name: Question 1 Correct Answer Button
   m_TagString: Untagged
@@ -4888,13 +4664,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2049976678}
-  m_Father: {fileID: 751495449}
+  m_Father: {fileID: 992901888}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 109.67, y: 37.44}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 59.77, y: -23.28}
+  m_SizeDelta: {x: 119.53, y: 46.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489982229
 MonoBehaviour:
@@ -4912,6 +4688,9 @@ MonoBehaviour:
   answer: {fileID: 1791352171}
   isToggle: 0
   toggleText: 0
+  isCorrectAnswer: 1
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &1489982230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4983,7 +4762,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1489982234}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkCorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -5033,23 +4812,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489982227}
   m_CullTransparentMesh: 0
---- !u!114 &1489982234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489982227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dba733ad1731304a862975780dcf95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctAnswerSelected: 0
-  nonToggleIncorrectAnswers:
-  - {fileID: 1081614157}
-  - {fileID: 1524720061}
-  - {fileID: 1817477982}
 --- !u!1 &1501575826
 GameObject:
   m_ObjectHideFlags: 0
@@ -5293,7 +5055,6 @@ GameObject:
   - component: {fileID: 1524720064}
   - component: {fileID: 1524720063}
   - component: {fileID: 1524720067}
-  - component: {fileID: 1524720068}
   m_Layer: 5
   m_Name: Question 1 Button
   m_TagString: Untagged
@@ -5313,13 +5074,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2111897450}
-  m_Father: {fileID: 1312358028}
-  m_RootOrder: 0
+  m_Father: {fileID: 992901888}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 109.67, y: 37.44}
+  m_AnchoredPosition: {x: 59.768, y: 23.325}
+  m_SizeDelta: {x: 119.54, y: 46.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524720063
 MonoBehaviour:
@@ -5392,7 +5153,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1524720068}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -5458,23 +5219,9 @@ MonoBehaviour:
   answer: {fileID: 1791352171}
   isToggle: 0
   toggleText: 0
---- !u!114 &1524720068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524720061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 1489982227}
-  nonToggleIncorrectAnswers:
-  - {fileID: 1081614157}
-  - {fileID: 1817477982}
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!1 &1558683865
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,7 +5394,6 @@ GameObject:
   - component: {fileID: 1640485487}
   - component: {fileID: 1640485486}
   - component: {fileID: 1640485485}
-  - component: {fileID: 1640485490}
   m_Layer: 5
   m_Name: Question 2 Button (1)
   m_TagString: Untagged
@@ -5691,6 +5437,9 @@ MonoBehaviour:
   answer: {fileID: 139890823}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &1640485486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5762,7 +5511,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1640485490}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -5812,21 +5561,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640485483}
   m_CullTransparentMesh: 0
---- !u!114 &1640485490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1640485483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
 --- !u!1 &1648878932
 GameObject:
   m_ObjectHideFlags: 0
@@ -6023,7 +5757,6 @@ GameObject:
   - component: {fileID: 1719150298}
   - component: {fileID: 1719150297}
   - component: {fileID: 1719150296}
-  - component: {fileID: 1719150301}
   m_Layer: 5
   m_Name: Question 2 Button (3)
   m_TagString: Untagged
@@ -6067,6 +5800,9 @@ MonoBehaviour:
   answer: {fileID: 672115194}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &1719150297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6138,7 +5874,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1719150301}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -6188,21 +5924,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719150294}
   m_CullTransparentMesh: 0
---- !u!114 &1719150301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719150294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
 --- !u!1 &1751236590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6314,7 +6035,6 @@ GameObject:
   - component: {fileID: 1765130976}
   - component: {fileID: 1765130975}
   - component: {fileID: 1765130974}
-  - component: {fileID: 1765130979}
   m_Layer: 5
   m_Name: Question 4 Button (2)
   m_TagString: Untagged
@@ -6358,6 +6078,9 @@ MonoBehaviour:
   answer: {fileID: 1352606954}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &1765130975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6429,7 +6152,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1765130979}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -6479,21 +6202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765130972}
   m_CullTransparentMesh: 0
---- !u!114 &1765130979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765130972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
 --- !u!1 &1791352169
 GameObject:
   m_ObjectHideFlags: 0
@@ -6587,7 +6295,6 @@ GameObject:
   - component: {fileID: 1817477985}
   - component: {fileID: 1817477984}
   - component: {fileID: 1817477988}
-  - component: {fileID: 1817477989}
   m_Layer: 5
   m_Name: Question 1 Button (1)
   m_TagString: Untagged
@@ -6607,13 +6314,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1425582904}
-  m_Father: {fileID: 1312358028}
-  m_RootOrder: 1
+  m_Father: {fileID: 992901888}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 109.67, y: 37.44}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -60.599983, y: 23.324997}
+  m_SizeDelta: {x: 121.2, y: 46.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817477984
 MonoBehaviour:
@@ -6686,7 +6393,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1817477989}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -6752,23 +6459,9 @@ MonoBehaviour:
   answer: {fileID: 1791352171}
   isToggle: 0
   toggleText: 0
---- !u!114 &1817477989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817477982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 1489982227}
-  nonToggleIncorrectAnswers:
-  - {fileID: 1081614157}
-  - {fileID: 1524720061}
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!1 &1830998209
 GameObject:
   m_ObjectHideFlags: 0
@@ -6783,7 +6476,6 @@ GameObject:
   - component: {fileID: 1830998213}
   - component: {fileID: 1830998212}
   - component: {fileID: 1830998211}
-  - component: {fileID: 1830998216}
   m_Layer: 5
   m_Name: Question 2 Correct Answer Button
   m_TagString: Untagged
@@ -6827,6 +6519,9 @@ MonoBehaviour:
   answer: {fileID: 1648878934}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 1
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &1830998212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6898,7 +6593,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1830998216}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkCorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -6948,20 +6643,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830998209}
   m_CullTransparentMesh: 0
---- !u!114 &1830998216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830998209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dba733ad1731304a862975780dcf95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctAnswerSelected: 0
-  nonToggleIncorrectAnswers: []
 --- !u!1 &1841446440
 GameObject:
   m_ObjectHideFlags: 0
@@ -7151,7 +6832,6 @@ GameObject:
   - component: {fileID: 1947944495}
   - component: {fileID: 1947944494}
   - component: {fileID: 1947944493}
-  - component: {fileID: 1947944498}
   m_Layer: 5
   m_Name: Question 2 Button (2)
   m_TagString: Untagged
@@ -7195,6 +6875,9 @@ MonoBehaviour:
   answer: {fileID: 1037790254}
   isToggle: 1
   toggleText: 0
+  isCorrectAnswer: 0
+  correctAnswerIsSelected: 0
+  isSelected: 0
 --- !u!114 &1947944494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7266,7 +6949,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1947944498}
+      - m_Target: {fileID: 0}
         m_MethodName: MarkIncorrectAnswerAsSelected
         m_Mode: 1
         m_Arguments:
@@ -7316,21 +6999,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947944491}
   m_CullTransparentMesh: 0
---- !u!114 &1947944498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947944491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 661d7b05e75f39d458ba46454add9b72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectAnswerSelected: 0
-  nonToggleCorrectAnswer: {fileID: 0}
-  nonToggleIncorrectAnswers: []
 --- !u!1 &1980476395
 GameObject:
   m_ObjectHideFlags: 0

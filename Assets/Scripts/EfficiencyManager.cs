@@ -17,7 +17,10 @@ public class EfficiencyManager : MonoBehaviour
     private Transform [] subjectPanels;
 
     [SerializeField]
-    private float offset;
+    private float xOffset;
+
+    [SerializeField]
+    private float yOffset;
 
     [SerializeField]
     private Text [] efficienciesTexts;
@@ -44,11 +47,12 @@ public class EfficiencyManager : MonoBehaviour
 
     private void Update()
     {
-        /* 
+        
         for(int i = 0; i < subjectPanels.Length; i++)
         {
-            subjectPanels[i].GetComponent<RectTransform>().sizeDelta = new Vector2(41, efficiencies[i] * offset);
+            // subjectPanels[i].GetComponent<RectTransform>().sizeDelta = new Vector2(41, efficiencies[i] + offset);
+            subjectPanels[i].GetComponent<RectTransform>().sizeDelta = new Vector2(xOffset, efficiencies[i] + yOffset);
         }
-        */
+        
     }
 }

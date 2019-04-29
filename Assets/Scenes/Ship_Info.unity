@@ -1024,6 +1024,7 @@ GameObject:
   - component: {fileID: 695043064}
   - component: {fileID: 695043063}
   - component: {fileID: 695043062}
+  - component: {fileID: 695043065}
   m_Layer: 5
   m_Name: Subjects Panel
   m_TagString: Untagged
@@ -1100,7 +1101,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1117,6 +1118,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695043060}
   m_CullTransparentMesh: 0
+--- !u!114 &695043065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695043060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
 --- !u!1 &765269138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3456,11 +3470,13 @@ MonoBehaviour:
   overallEfficiency: 0
   overallEfficiencyText: {fileID: 1819826258}
   subjectPanels:
-  - {fileID: 1363166499}
-  - {fileID: 421330266}
-  - {fileID: 421330266}
-  - {fileID: 421330266}
-  offset: 100
+  - {fileID: 769244976}
+  - {fileID: 861512155}
+  - {fileID: 1632532727}
+  - {fileID: 1910125593}
+  - {fileID: 470302250}
+  xOffset: 0
+  yOffset: 0
   efficienciesTexts:
   - {fileID: 2023030266}
   - {fileID: 1024352333}

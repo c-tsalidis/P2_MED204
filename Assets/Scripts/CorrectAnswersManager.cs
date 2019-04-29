@@ -8,6 +8,8 @@ public class CorrectAnswersManager : MonoBehaviour
     [SerializeField]
     private GameObject [] correctAnswers;
     [SerializeField]
+    private int correctAnswersCounter = 0;
+    [SerializeField]
     private GameObject [] incorrectAnswers;
 
     [SerializeField]
@@ -31,6 +33,22 @@ public class CorrectAnswersManager : MonoBehaviour
     {
         // by default there are no answers selected
         numberOfCorrectAnswersSelected = 0;
+        correctAnswersCounter = 0;
+        /*
+        */
+         for(int i = 0; i < correctAnswers.Length; i++)
+        {
+            if(correctAnswers[i].GetComponent<AnswerQuestionQuiz>() != null)
+            {
+                AnswerQuestionQuiz answerQuestionQuiz = correctAnswers[i].GetComponent<AnswerQuestionQuiz>();
+                if(answerQuestionQuiz.correctAnswerIsSelected == true)
+                {
+                    correctAnswersCounter++;
+                }
+            }
+        }
+
+        /*
         numberOfIncorrectAnswersSelected = 0;
 
         for(int i = 0; i < correctAnswers.Length; i++)
@@ -58,6 +76,7 @@ public class CorrectAnswersManager : MonoBehaviour
                 }
             }
         }
+         */
         // Debug.Log("Number of correct answers selected: " + numberOfCorrectAnswersSelected);
         // Debug.Log("Number of incorrect answers selected: " + numberOfIncorrectAnswersSelected);
 
@@ -68,10 +87,10 @@ public class CorrectAnswersManager : MonoBehaviour
         // PlayerPrefs.SetInt(numberOfIncorrectAnswersSelected_PlayerPrefs_Key, numberOfIncorrectAnswersSelected);
 
 
-        float sum1 = (numberOfCorrectAnswersSelected - (numberOfIncorrectAnswersSelected / 1.50f));
+        // float sum1 = (numberOfCorrectAnswersSelected - (numberOfIncorrectAnswersSelected / 1.50f));
         // float sum2 = (correctAnswers.Length + incorrectAnswers.Length);
         // float division = sum1 / sum2 * 100;
-        float division = (100 * sum1) / correctAnswers.Length;
+        float division = (100 * correctAnswersCounter) / correctAnswers.Length;
 
         /*
         Debug.Log(numberOfCorrectAnswersSelected);
@@ -84,7 +103,7 @@ public class CorrectAnswersManager : MonoBehaviour
         Debug.Log(sum2);
         Debug.Log(sum1 / sum2);
          */
-        efficiency = Mathf.RoundToInt( division);
+        efficiency = Mathf.RoundToInt(division);
 
         PlayerPrefs.SetInt(efficiency_PlayerPrefs_Key, efficiency);
     }
