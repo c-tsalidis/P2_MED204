@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class SmoothScrollRectSnapping : MonoBehaviour
 {
 
+
+    /*
     // made with this: Mathf.SmoothDamp
     // https://docs.unity3d.com/ScriptReference/Mathf.SmoothDamp.html
 
@@ -48,10 +50,75 @@ public class SmoothScrollRectSnapping : MonoBehaviour
 
         float newValue = Mathf.SmoothDamp(value, targetValue, ref currentVelocity, smoothTime);
         scrollBar.value = newValue;
-        /*
+        
         float newPosition = Mathf.SmoothDamp(transform.position.y, target.position.y, ref yVelocity, smoothTime);
         transform.position = new Vector3(transform.position.x, newPosition, transform.position.z);
-         */
+        
+    }
+     */
+
+
+     // made with this: https://www.youtube.com/watch?v=9B7ahj1kaYs
+
+    [SerializeField]
+    private RectTransform scrollablePanel;
+    [SerializeField]
+    private GameObject [] gridElements;
+
+    [SerializeField]
+    private RectTransform center;
+    [SerializeField]
+    private float scrollForce = 5f;
+    private float [] distance; // distances between the grid elements to the center
+    private bool isBeingDragged = false;
+    private int gridElementsDistance; // distance between the grid elements
+    public int gridElementNumber; //
+
+    private void Start()
+    {
+        distance = new float[gridElements.Length];
+        // gridElementsDistance = (int) Mathf.Abs(gridElements[1].GetComponent<RectTransform>().position.x - gridElements[0].GetComponent<RectTransform>().position.x);
+        gridElementsDistance = 300;
+        // print(gridElementsDistance);
+    }
+
+    private void Update()
+    {
+        for(int i = 0; i < gridElements.Length; i++)
+        {
+            distance[i] = Mathf.Abs(center.transform.position.x - gridElements[i].transform.position.x);
+        }
+
+        float minimumDistance = Mathf.Min(distance); // returns the smallest of every element of the distance array
+        for(int i = 0; i < gridElements.Length; i++)
+        {
+            if(minimumDistance == distance[i])
+            {
+                gridElementNumber = i;
+            }
+        } 
+        if(!isBeingDragged)
+        {
+            LerpToGridElement(gridElementNumber * -gridElementsDistance);
+        }
+    }
+
+    private void LerpToGridElement(int position)
+    {
+        float newX = Mathf.Lerp(scrollablePanel.anchoredPosition.x, position, Time.deltaTime * scrollForce); // linearly interpolates between a and b by t
+        Vector2 newPosition = new Vector2(newX, scrollablePanel.anchoredPosition.y);
+
+        scrollablePanel.anchoredPosition = newPosition;
+    }
+
+    public void StartDrag()
+    {
+        isBeingDragged = true;
+    }
+
+    public void EndDrag()
+    {
+        isBeingDragged = false;
     }
 
 }
