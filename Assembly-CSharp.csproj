@@ -62,7 +62,7 @@
      <Compile Include="Assets\Scripts\PrefabSelectionAR.cs" />
      <Compile Include="Assets\Scripts\ResultsManager.cs" />
      <Compile Include="Assets\Scripts\SignifiersManager.cs" />
-     <Compile Include="Assets\SmoothScrollRectSnapping.cs" />
+     <Compile Include="Assets\Scripts\SmoothScrollRectSnapping.cs" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
