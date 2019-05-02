@@ -141,6 +141,7 @@ public class PrefabSelectionAR : MonoBehaviour
             if(selected == true)
             {
                 prefab.transform.GetChild(1).gameObject.SetActive(true);
+                prefab.transform.GetChild(2).gameObject.SetActive(false);
             }
             else
             {
