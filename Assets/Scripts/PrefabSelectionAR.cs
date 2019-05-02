@@ -23,10 +23,35 @@ public class PrefabSelectionAR : MonoBehaviour
     private Manager managerObject;
     public string [] sceneLoadStrings;
 
+    [SerializeField]
+    private int [] efficiencies;
+
+
+    [SerializeField]
+    private int minumumEfficiencyToBeFinished = 75;
+    [SerializeField]
+    private bool [] prefabIsFinished;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        // get all the efficiency from the keys stored in the device
+        // by default their value is 0
+        efficiencies[0] = PlayerPrefs.GetInt("Efficiency Maths");
+        efficiencies[1] = PlayerPrefs.GetInt("Efficiency Physics");
+        efficiencies[2] = PlayerPrefs.GetInt("Efficiency Biology");
+        efficiencies[3] = PlayerPrefs.GetInt("Efficiency Chemistry");
+        efficiencies[4] = PlayerPrefs.GetInt("Efficiency Geography");
+
+        for(int i = 0; i < efficiencies.Length; i++)
+        {
+            // if the efficiency is higher than the 
+            if(efficiencies[i] >= minumumEfficiencyToBeFinished)
+            {
+                prefabIsFinished[i] = true;
+            }
+        }
 
     }
 
@@ -101,7 +126,18 @@ public class PrefabSelectionAR : MonoBehaviour
         for (int i = 0; i < prefabs.Length; i++)
         {
             bool selected = isSelected[i];
+            bool isFinished = prefabIsFinished[i];
             GameObject prefab = prefabs[i];
+            if(isFinished == true) // if the prefab is finished
+            {
+                prefab.transform.GetChild(2).gameObject.SetActive(true);
+                prefab.transform.GetChild(0).gameObject.SetActive(false);
+            }
+            else // if the prefab is NOT finished
+            {
+                prefab.transform.GetChild(2).gameObject.SetActive(false);
+                prefab.transform.GetChild(0).gameObject.SetActive(true);
+            }
             if(selected == true)
             {
                 prefab.transform.GetChild(1).gameObject.SetActive(true);

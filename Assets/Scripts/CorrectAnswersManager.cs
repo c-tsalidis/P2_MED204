@@ -9,9 +9,10 @@ public class CorrectAnswersManager : MonoBehaviour
     private GameObject [] correctAnswers;
     [SerializeField]
     private int correctAnswersCounter = 0;
+
+    /*
     [SerializeField]
     private GameObject [] incorrectAnswers;
-
     [SerializeField]
     private int numberOfCorrectAnswersSelected; 
     [SerializeField]
@@ -21,6 +22,7 @@ public class CorrectAnswersManager : MonoBehaviour
     private string numberOfCorrectAnswersSelected_PlayerPrefs_Key;
     [SerializeField]
     private string numberOfIncorrectAnswersSelected_PlayerPrefs_Key;
+    */
 
 
     [SerializeField]
@@ -32,7 +34,7 @@ public class CorrectAnswersManager : MonoBehaviour
     public void CheckAnswers()
     {
         // by default there are no answers selected
-        numberOfCorrectAnswersSelected = 0;
+        // numberOfCorrectAnswersSelected = 0;
         correctAnswersCounter = 0;
         /*
         */
