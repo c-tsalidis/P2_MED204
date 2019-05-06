@@ -433,13 +433,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02696288356ab6a43bafa425f150789e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonText: In tropical coastal areas
+  buttonText: "I tropiske kystomr\xE5der"
   answer: {fileID: 355496710}
   isToggle: 0
   toggleText: 0
   isCorrectAnswer: 1
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &84409531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,9 +663,11 @@ MonoBehaviour:
   answer: {fileID: 1875121230}
   isToggle: 1
   toggleText: 0
-  isCorrectAnswer: 0
-  correctAnswerIsSelected: 1
+  isCorrectAnswer: 1
+  correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 3
 --- !u!114 &102245942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,7 +1029,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 1
 --- !u!114 &121527948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,13 +1206,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02696288356ab6a43bafa425f150789e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonText: Only in asia
+  buttonText: Kun i asien
   answer: {fileID: 355496710}
   isToggle: 0
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &124616479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1759,6 +1767,80 @@ MonoBehaviour:
   - {fileID: 947647046}
   smoothScrolling: {fileID: 614814166}
   gridElementNumber: 0
+--- !u!1 &236856527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236856528}
+  - component: {fileID: 236856530}
+  - component: {fileID: 236856529}
+  m_Layer: 5
+  m_Name: Back Button Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &236856528
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236856527}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1504415180}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 14.799988, y: -0.5000305}
+  m_SizeDelta: {x: 14.02, y: -27.329998}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &236856529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236856527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: c7d42679dfb93364080167d63706e42a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &236856530
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236856527}
+  m_CullTransparentMesh: 0
 --- !u!1 &268850465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,7 +1900,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &268850468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,7 +2083,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 2
 --- !u!114 &275871272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2180,7 +2266,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &289211171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,7 +2449,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 1
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 1
 --- !u!114 &325893256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2542,7 +2632,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &326425893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2958,7 +3050,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a82f0647e3e682a46b10605c2af50839, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2970,7 +3062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Your Overall Efficiency \nof this part is"
+  m_Text: "Effektiviteten p\xE5 denne del er:"
 --- !u!222 &346517351
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3037,11 +3129,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: a82f0647e3e682a46b10605c2af50839, type: 3}
+    m_FontSize: 12
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3251,6 +3343,7 @@ RectTransform:
   - {fileID: 1528257025}
   - {fileID: 346517349}
   - {fileID: 1967364767}
+  - {fileID: 1506316476}
   m_Father: {fileID: 162458843}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3355,7 +3448,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 3
 --- !u!114 &398649336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3536,7 +3631,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 1
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &411152760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4544,6 +4641,8 @@ MonoBehaviour:
   correctAnswersCounter: 0
   efficiency_PlayerPrefs_Key: Efficiency Physics
   efficiency: 0
+  wrongAnswerText: {fileID: 0}
+  numberOfQuestionPanels: 4
 --- !u!1 &526997069
 GameObject:
   m_ObjectHideFlags: 0
@@ -4858,7 +4957,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 3
 --- !u!114 &588369000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5039,7 +5140,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 1
 --- !u!114 &602172987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5303,6 +5406,7 @@ MonoBehaviour:
   center: {fileID: 521374501}
   scrollForce: 10
   gridElementNumber: 0
+  gridElementNumber_isChangedOnClick: 0
 --- !u!114 &614814167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5333,7 +5437,7 @@ MonoBehaviour:
   m_Vertical: 0
   m_MovementType: 0
   m_Elasticity: 0.1
-  m_Inertia: 1
+  m_Inertia: 0
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 2
   m_Viewport: {fileID: 614814165}
@@ -5623,7 +5727,7 @@ RectTransform:
   m_Children:
   - {fileID: 813841758}
   m_Father: {fileID: 1504415180}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -5696,7 +5800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5890,6 +5994,7 @@ GameObject:
   - component: {fileID: 680069257}
   - component: {fileID: 680069256}
   - component: {fileID: 680069255}
+  - component: {fileID: 680069258}
   m_Layer: 5
   m_Name: Signifier (2)
   m_TagString: Untagged
@@ -5973,6 +6078,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680069253}
   m_CullTransparentMesh: 0
+--- !u!114 &680069258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680069253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 680069256}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 614814166}
+        m_MethodName: ChangeGridElementNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &684679272
 GameObject:
   m_ObjectHideFlags: 0
@@ -6302,6 +6460,7 @@ GameObject:
   - component: {fileID: 702599171}
   - component: {fileID: 702599170}
   - component: {fileID: 702599169}
+  - component: {fileID: 702599172}
   m_Layer: 5
   m_Name: Signifier
   m_TagString: Untagged
@@ -6385,6 +6544,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702599167}
   m_CullTransparentMesh: 0
+--- !u!114 &702599172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702599167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 702599170}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 614814166}
+        m_MethodName: ChangeGridElementNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &705014296
 GameObject:
   m_ObjectHideFlags: 0
@@ -6761,7 +6973,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &732123802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6942,7 +7156,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 2
 --- !u!114 &737703091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7123,7 +7339,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 2
 --- !u!114 &743952819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7477,7 +7695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &813841758
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7956,6 +8174,8 @@ MonoBehaviour:
   correctAnswersCounter: 0
   efficiency_PlayerPrefs_Key: Efficiency Biology
   efficiency: 0
+  wrongAnswerText: {fileID: 1506316474}
+  numberOfQuestionPanels: 4
 --- !u!1 &935113034
 GameObject:
   m_ObjectHideFlags: 0
@@ -8094,7 +8314,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 2
 --- !u!114 &941572303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8228,6 +8450,7 @@ GameObject:
   - component: {fileID: 947647050}
   - component: {fileID: 947647049}
   - component: {fileID: 947647048}
+  - component: {fileID: 947647051}
   m_Layer: 5
   m_Name: Signifier (3)
   m_TagString: Untagged
@@ -8311,6 +8534,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947647046}
   m_CullTransparentMesh: 0
+--- !u!114 &947647051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947647046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 947647049}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 614814166}
+        m_MethodName: ChangeGridElementNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &992901887
 GameObject:
   m_ObjectHideFlags: 0
@@ -8886,7 +9162,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!1 &1086292196
 GameObject:
   m_ObjectHideFlags: 0
@@ -9426,7 +9704,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 1
 --- !u!114 &1143810958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10051,7 +10331,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 1
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 2
 --- !u!114 &1241959129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10354,7 +10636,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 3
 --- !u!114 &1312764383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10768,7 +11052,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 1
 --- !u!114 &1399587847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10949,7 +11235,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 1
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1401859278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11130,7 +11418,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1409983585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11592,7 +11882,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 1
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1489982230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11881,7 +12173,7 @@ GameObject:
   - component: {fileID: 1504415182}
   - component: {fileID: 1504415181}
   m_Layer: 5
-  m_Name: Title panel (1)
+  m_Name: Title panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11899,6 +12191,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1923252964}
+  - {fileID: 236856528}
   - {fileID: 647622396}
   m_Father: {fileID: 78042379}
   m_RootOrder: 5
@@ -11945,6 +12238,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504415179}
   m_CullTransparentMesh: 0
+--- !u!1 &1506316473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506316476}
+  - component: {fileID: 1506316475}
+  - component: {fileID: 1506316474}
+  m_Layer: 5
+  m_Name: Wrong answers text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506316474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506316473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6745098, g: 0.03137255, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: a82f0647e3e682a46b10605c2af50839, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Svaret til sp\xF8rgsm\xE5l x er forkert"
+--- !u!222 &1506316475
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506316473}
+  m_CullTransparentMesh: 0
+--- !u!224 &1506316476
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506316473}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 390759684}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.000015258789}
+  m_SizeDelta: {x: 180, y: 152.29999}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1514329344
 GameObject:
   m_ObjectHideFlags: 0
@@ -12135,7 +12507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08510465, g: 0.764151, b: 0, a: 1}
+  m_Color: {r: 0.08510465, g: 0.764151, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -12339,7 +12711,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!1 &1528257024
 GameObject:
   m_ObjectHideFlags: 0
@@ -12398,7 +12772,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a82f0647e3e682a46b10605c2af50839, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -12410,7 +12784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Congratulations!
+  m_Text: Tillykke!
 --- !u!222 &1528257027
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12791,7 +13165,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1640485486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13323,7 +13699,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1719150297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13498,13 +13876,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02696288356ab6a43bafa425f150789e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonText: In temperate coastal areas
+  buttonText: "I tempererede kystomr\xE5der"
   answer: {fileID: 355496710}
   isToggle: 0
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1733428658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13782,7 +14162,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1765130975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13921,7 +14303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1779623904
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13995,6 +14377,7 @@ GameObject:
   - component: {fileID: 1783357092}
   - component: {fileID: 1783357091}
   - component: {fileID: 1783357090}
+  - component: {fileID: 1783357093}
   m_Layer: 5
   m_Name: Signifier (1)
   m_TagString: Untagged
@@ -14078,6 +14461,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783357088}
   m_CullTransparentMesh: 0
+--- !u!114 &1783357093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783357088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1783357091}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 614814166}
+        m_MethodName: ChangeGridElementNumber
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1789987527
 GameObject:
   m_ObjectHideFlags: 0
@@ -14131,13 +14567,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02696288356ab6a43bafa425f150789e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonText: All over the world
+  buttonText: Over hele kloden
   answer: {fileID: 355496710}
   isToggle: 0
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1789987530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14518,7 +14956,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!1 &1830998209
 GameObject:
   m_ObjectHideFlags: 0
@@ -14578,7 +15018,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 1
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1830998212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15012,7 +15454,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a82f0647e3e682a46b10605c2af50839, type: 3}
     m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
@@ -15092,7 +15534,9 @@ MonoBehaviour:
   toggleText: 0
   isCorrectAnswer: 0
   correctAnswerIsSelected: 0
+  incorrectAnswerIsSelected: 0
   isSelected: 0
+  questionPanelNumber: 0
 --- !u!114 &1947944494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15253,7 +15697,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a82f0647e3e682a46b10605c2af50839, type: 3}
     m_FontSize: 31
     m_FontStyle: 1
     m_BestFit: 0
@@ -15341,6 +15785,7 @@ MonoBehaviour:
   center: {fileID: 0}
   scrollForce: 5
   gridElementNumber: 0
+  gridElementNumber_isChangedOnClick: 0
 --- !u!1 &1982941989
 GameObject:
   m_ObjectHideFlags: 0

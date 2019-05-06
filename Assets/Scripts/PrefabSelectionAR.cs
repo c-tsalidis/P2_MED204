@@ -11,7 +11,7 @@ public class PrefabSelectionAR : MonoBehaviour
     // https://www.youtube.com/watch?v=hi_KDpC1nzk&t=317s
 
     private string prefabName;
-    public static string statusOfText = "Point at a part";
+    public static string statusOfText = "Pege på en del";
 
     public Text text;
 

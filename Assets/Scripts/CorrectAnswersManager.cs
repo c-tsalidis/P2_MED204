@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CorrectAnswersManager : MonoBehaviour
 {
@@ -10,26 +11,19 @@ public class CorrectAnswersManager : MonoBehaviour
     [SerializeField]
     private int correctAnswersCounter = 0;
 
-    /*
-    [SerializeField]
-    private GameObject [] incorrectAnswers;
-    [SerializeField]
-    private int numberOfCorrectAnswersSelected; 
-    [SerializeField]
-    private int numberOfIncorrectAnswersSelected;
-
-    [SerializeField]
-    private string numberOfCorrectAnswersSelected_PlayerPrefs_Key;
-    [SerializeField]
-    private string numberOfIncorrectAnswersSelected_PlayerPrefs_Key;
-    */
-
-
     [SerializeField]
     private string efficiency_PlayerPrefs_Key;
 
     [SerializeField]
     private int efficiency;
+
+    [SerializeField]
+    private Text wrongAnswerText;
+
+    private SmoothScrollRectSnapping smoothScroll;
+
+    [SerializeField]
+    private int numberOfQuestionPanels = 4;
 
     public void CheckAnswers()
     {
@@ -38,7 +32,9 @@ public class CorrectAnswersManager : MonoBehaviour
         correctAnswersCounter = 0;
         /*
         */
-         for(int i = 0; i < correctAnswers.Length; i++)
+        string wrongAnswerQuestionNumberText = "";
+        int wrongAnswersCounter = 0;
+        for(int i = 0; i < correctAnswers.Length; i++)
         {
             if(correctAnswers[i].GetComponent<AnswerQuestionQuiz>() != null)
             {
@@ -47,64 +43,41 @@ public class CorrectAnswersManager : MonoBehaviour
                 {
                     correctAnswersCounter++;
                 }
+                else if(answerQuestionQuiz.correctAnswerIsSelected == false) // then the user chose the incorrect asnwer
+                {
+                    wrongAnswersCounter++;
+                    
+                    string tempText = "";
+                    // bool [] questionAnswers = new bool[numberOfQuestionPanels];
+                    for(int j = 0; j < numberOfQuestionPanels; j++)
+                    {
+                        // go through the gridelement number in 
+                        // asnwerQuestionQuiz is only in the selected button
+                        if(answerQuestionQuiz.questionPanelNumber == j)
+                        {
+                            wrongAnswerQuestionNumberText += (j + 1).ToString() + ", ";
+                            // questionAnswers[j] = true;
+                            // the button belongs to the question number i
+                            // wrongAnswerText.text = "Svaret til spørgsmål " + (j + 1)  + " er forkert";
+                        }
+                        wrongAnswerText.text = "Svaret til spørgsmål " + wrongAnswerQuestionNumberText  + " er forkert";
+                    }
+                }
             }
         }
-
-        /*
-        numberOfIncorrectAnswersSelected = 0;
-
-        for(int i = 0; i < correctAnswers.Length; i++)
+        Debug.Log("Wrong answers counter: " + wrongAnswersCounter);
+        if(wrongAnswersCounter == 0) // if there's no wrong answers
         {
-            GameObject go = correctAnswers[i];
-            if(go.GetComponent<CorrectAnswer>() != null)
-            {
-                // Debug.Log(go.transform.name + " has the CorrectAnswer script attached to it!!");
-                CorrectAnswer correctAnswer = go.GetComponent<CorrectAnswer>();
-                if(correctAnswer.correctAnswerSelected == true)
-                {
-                    numberOfCorrectAnswersSelected++;
-                }
-            }
+            wrongAnswerText.gameObject.SetActive(false);
         }
-        for(int i = 0; i < incorrectAnswers.Length; i++)
-        { 
-            GameObject go = incorrectAnswers[i];
-            if(go.GetComponent<IncorrectAnswer>() != null)
-            {
-                IncorrectAnswer incorrectAnswer = go.GetComponent<IncorrectAnswer>();
-                if(incorrectAnswer.incorrectAnswerSelected == true)
-                {
-                    numberOfIncorrectAnswersSelected++;
-                }
-            }
+        else
+        {
+            wrongAnswerText.gameObject.SetActive(true);
         }
-         */
-        // Debug.Log("Number of correct answers selected: " + numberOfCorrectAnswersSelected);
-        // Debug.Log("Number of incorrect answers selected: " + numberOfIncorrectAnswersSelected);
 
-        // The key of PlayerPrefs go like this: 
-        // "Number Of Correct Answers Hull", and so on 
-        // "Number Of Incorrect Answers Hull", and so on 
-        // PlayerPrefs.SetInt(numberOfCorrectAnswersSelected_PlayerPrefs_Key, numberOfCorrectAnswersSelected);
-        // PlayerPrefs.SetInt(numberOfIncorrectAnswersSelected_PlayerPrefs_Key, numberOfIncorrectAnswersSelected);
-
-
-        // float sum1 = (numberOfCorrectAnswersSelected - (numberOfIncorrectAnswersSelected / 1.50f));
-        // float sum2 = (correctAnswers.Length + incorrectAnswers.Length);
-        // float division = sum1 / sum2 * 100;
+        
         float division = (100 * correctAnswersCounter) / correctAnswers.Length;
 
-        /*
-        Debug.Log(numberOfCorrectAnswersSelected);
-        Debug.Log(numberOfIncorrectAnswersSelected / 2);
-        Debug.Log(correctAnswers.Length);
-        Debug.Log(incorrectAnswers.Length);
-        Debug.Log(numberOfCorrectAnswersSelected -(numberOfIncorrectAnswersSelected/2));
-        Debug.Log(correctAnswers.Length + incorrectAnswers.Length);
-        Debug.Log(sum1);
-        Debug.Log(sum2);
-        Debug.Log(sum1 / sum2);
-         */
         efficiency = Mathf.RoundToInt(division);
 
         PlayerPrefs.SetInt(efficiency_PlayerPrefs_Key, efficiency);

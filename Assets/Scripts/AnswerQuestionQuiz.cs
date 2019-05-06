@@ -13,13 +13,17 @@ public class AnswerQuestionQuiz : MonoBehaviour
     
     public bool toggleText;
 
+
     // [SerializeField]
     // private GameObject [] restOfAnswers;
 
     public bool isCorrectAnswer = false;
 
     public bool correctAnswerIsSelected = false;
+    public bool incorrectAnswerIsSelected = false;
     public bool isSelected;
+
+    public int questionPanelNumber;
 
     public void AnswerQuizQuestion()
     {
@@ -43,6 +47,10 @@ public class AnswerQuestionQuiz : MonoBehaviour
                     {
                         correctAnswerIsSelected = true;
                     }
+                    if(answerQuestionQuiz.isCorrectAnswer == false && gameObject == child)
+                    {
+                        incorrectAnswerIsSelected = true;
+                    }
                     if(child != gameObject)
                     {
                         Unselect(child);
@@ -61,6 +69,7 @@ public class AnswerQuestionQuiz : MonoBehaviour
         }
         answerQuestionQuiz.isSelected = false;
         answerQuestionQuiz.correctAnswerIsSelected = false;
+        answerQuestionQuiz.incorrectAnswerIsSelected = false;
         Debug.Log("Unchecked: " + gameObject.name);
     }
 

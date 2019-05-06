@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\CorrectAnswersManager.cs" />
      <Compile Include="Assets\Scripts\EfficiencyManager.cs" />
      <Compile Include="Assets\Scripts\IncorrectAnswer.cs" />
+     <Compile Include="Assets\Scripts\IncorrectAnswersManager.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\PrefabSelectionAR.cs" />
      <Compile Include="Assets\Scripts\ResultsManager.cs" />
