@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ShipAR.unity
+- path: Assets/Scenes/Quiz_Engine.unity
   isLoaded: 1
   isActive: 1
+  isSubScene: 0

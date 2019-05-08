@@ -8,7 +8,6 @@ public class PrefabSelectionAR : MonoBehaviour
 {
 
     // This script is based on this tutorial:
-    // https://www.youtube.com/watch?v=hi_KDpC1nzk&t=317s
 
     private string prefabName;
     public static string statusOfText = "Pege på en del";
@@ -64,6 +63,8 @@ public class PrefabSelectionAR : MonoBehaviour
         {
             isSelected[i] = false;
         }
+
+        // // https://www.youtube.com/watch?v=hi_KDpC1nzk&t=317s
 
         // if it's a phone
         if((Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began))

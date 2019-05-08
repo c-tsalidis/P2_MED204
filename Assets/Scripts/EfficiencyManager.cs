@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class EfficiencyManager : MonoBehaviour
 {
 
-    public int [] efficiencies;
     [SerializeField]
     private int overallEfficiency;
 
@@ -25,6 +24,9 @@ public class EfficiencyManager : MonoBehaviour
     [SerializeField]
     private Text [] efficienciesTexts;
 
+    public int [] efficiencies;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +52,6 @@ public class EfficiencyManager : MonoBehaviour
         
         for(int i = 0; i < subjectPanels.Length; i++)
         {
-            // subjectPanels[i].GetComponent<RectTransform>().sizeDelta = new Vector2(41, efficiencies[i] + offset);
             subjectPanels[i].GetComponent<RectTransform>().sizeDelta = new Vector2(xOffset, efficiencies[i] + yOffset);
         }
         

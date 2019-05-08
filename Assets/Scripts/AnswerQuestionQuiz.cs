@@ -13,10 +13,6 @@ public class AnswerQuestionQuiz : MonoBehaviour
     
     public bool toggleText;
 
-
-    // [SerializeField]
-    // private GameObject [] restOfAnswers;
-
     public bool isCorrectAnswer = false;
 
     public bool correctAnswerIsSelected = false;

@@ -13,6 +13,7 @@ public class ResultsManager : MonoBehaviour
 
     [SerializeField]
     private Text efficiencyText;
+    
     public void ShowResults()
     {
         int efficiency = PlayerPrefs.GetInt(playerPrefsKey);

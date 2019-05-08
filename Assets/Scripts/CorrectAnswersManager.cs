@@ -20,18 +20,14 @@ public class CorrectAnswersManager : MonoBehaviour
     [SerializeField]
     private Text wrongAnswerText;
 
-    private SmoothScrollRectSnapping smoothScroll;
-
     [SerializeField]
     private int numberOfQuestionPanels = 4;
 
     public void CheckAnswers()
     {
         // by default there are no answers selected
-        // numberOfCorrectAnswersSelected = 0;
         correctAnswersCounter = 0;
-        /*
-        */
+
         string wrongAnswerQuestionNumberText = "";
         int wrongAnswersCounter = 0;
         for(int i = 0; i < correctAnswers.Length; i++)
@@ -46,19 +42,11 @@ public class CorrectAnswersManager : MonoBehaviour
                 else if(answerQuestionQuiz.correctAnswerIsSelected == false) // then the user chose the incorrect asnwer
                 {
                     wrongAnswersCounter++;
-                    
-                    string tempText = "";
-                    // bool [] questionAnswers = new bool[numberOfQuestionPanels];
                     for(int j = 0; j < numberOfQuestionPanels; j++)
                     {
-                        // go through the gridelement number in 
-                        // asnwerQuestionQuiz is only in the selected button
                         if(answerQuestionQuiz.questionPanelNumber == j)
                         {
                             wrongAnswerQuestionNumberText += (j + 1).ToString() + ", ";
-                            // questionAnswers[j] = true;
-                            // the button belongs to the question number i
-                            // wrongAnswerText.text = "Svaret til spørgsmål " + (j + 1)  + " er forkert";
                         }
                         wrongAnswerText.text = "Svaret til spørgsmål " + wrongAnswerQuestionNumberText  + " er forkert";
                     }

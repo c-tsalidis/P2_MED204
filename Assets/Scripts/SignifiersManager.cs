@@ -9,14 +9,7 @@ public class SignifiersManager : MonoBehaviour
     public GameObject [] blankSignifiers;
 
     public SmoothScrollRectSnapping smoothScrolling;
-
-    // private int [] gridElementNumber = {0, 1, 2, 3};
     public int gridElementNumber;
-
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {
@@ -27,7 +20,6 @@ public class SignifiersManager : MonoBehaviour
         {
             if(gridElementNumber == i)
             {
-                // Debug.Log("Blue!!");
                 // signifiers[i].GetComponent<Image>().color = new Color(79, 170, 255, 255);
                 coloredSignifiers[i].SetActive(true);
                 blankSignifiers[i].SetActive(false);
