@@ -10,7 +10,6 @@ public class SmoothScrollRectSnapping : MonoBehaviour
 
 
      // Based on this tutorial: https://www.youtube.com/watch?v=9B7ahj1kaYs
-
     [SerializeField]
     private RectTransform scrollablePanel; // the scrollable panel
     [SerializeField]
@@ -37,57 +36,82 @@ public class SmoothScrollRectSnapping : MonoBehaviour
         // print(gridElementsDistance);
     }
 
+    // called once every frame
     private void Update()
     {
+        // goes through all the grid elements
         for(int i = 0; i < gridElements.Length; i++)
         {
+            // calculates the distance from the center to each panel
             distance[i] = Mathf.Abs(center.transform.position.x - gridElements[i].transform.position.x);
         }
 
-        float minimumDistance = Mathf.Min(distance); // returns the smallest of every element of the distance array
+        // returns the smallest of every element of the distance array
+        float minimumDistance = Mathf.Min(distance);
+        
+        // goes through all the grid elements
         for(int i = 0; i < gridElements.Length; i++)
         {
-            
+            // if the minimum distance is the same as the distance from the question panel i
             if(minimumDistance == distance[i] && gridElementNumber_isChangedOnClick == false)
             {
+                // the question panel that should be shown is i
                 gridElementNumber = i;
             }
         } 
+        // if the scrollrect is not being dragged
         if(!isBeingDragged)
         {
+            // lerp the panel question to be the grid element number times minus the distance
             LerpToGridElement(gridElementNumber * -gridElementsDistance);
         }
     }
 
+    // Takes care of displaying the question panel corresponding to the distance to the center
     private void LerpToGridElement(int position)
     {
-        float newX = Mathf.Lerp(scrollablePanel.anchoredPosition.x, position, Time.deltaTime * scrollForce); // linearly interpolates between a and b by time t
+         // linearly interpolates between a and b by time t
+        float newX = Mathf.Lerp(scrollablePanel.anchoredPosition.x, position, Time.deltaTime * scrollForce);
         Vector2 newPosition = new Vector2(newX, scrollablePanel.anchoredPosition.y);
-
+        // set the scrollable panel's anchored position to the new position
         scrollablePanel.anchoredPosition = newPosition;
     }
 
+    // set the fact that panel is being is dragged to true
+    // the panel is being dragged
     public void StartDrag()
     {
         isBeingDragged = true;
     }
 
+    // set the fact that panel is being is dragged to false
+    // the panel is not being dragged
     public void EndDrag()
     {
         isBeingDragged = false;
     }
 
+
+    // changing the grid Element number depending on which signifier the user clicks on
     public void ChangeGridElementNumber(int newGridElementNumber)
     {
-        gridElementNumber_isChangedOnClick = true; // to be able to modify the grid element number (because it  is updated in each frame in the Update method)
+        // the grid element number has been changed
+        // to be able to modify the grid element number (because it  is updated in each frame in the Update method)
+        gridElementNumber_isChangedOnClick = true; 
+        // the gridElementNumber is the new grid element number corresponding to the signifier button that the user clicked on
         gridElementNumber = newGridElementNumber;
-        StartCoroutine(WaitForAWhile(newGridElementNumber)); // wait for a couple of seconds to make the sliding transition smooth
+        // start a timer --> wait for a couple of seconds to make the sliding transition smoother
+        StartCoroutine(WaitForAWhile(newGridElementNumber));
     }
 
+    // start a timer --> wait for a couple of seconds to make the sliding transition smoother 
     IEnumerator WaitForAWhile(int newNumber)
     {
-        yield return new WaitForSeconds(5); // waiting for 5 seconds
+         // waiting for 5 seconds
+        yield return new WaitForSeconds(5);
         Debug.Log("Changed the grid element number to: " + newNumber);
+        // the grid element number has not been changed
+        // to be able to modify the grid element number (because it  is updated in each frame in the Update method)
         gridElementNumber_isChangedOnClick = false;
     }
 
